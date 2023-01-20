@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 *,
 *:before,
 *:after {
@@ -27,6 +28,7 @@ h6 {
 a {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 a:hover {
   color: #f2c935;
@@ -38,7 +40,9 @@ ul {
   width: 90%;
   margin: auto;
 }
-
+p{
+  font-family: "Open Sans", sans-serif;
+}
 /*Animaciones*/
 @keyframes fade {
   from {
@@ -169,7 +173,7 @@ ul {
 #hero {
   margin-top: 65px;
   padding: 70px 0;
-  max-width: 1200px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +183,6 @@ ul {
   flex-direction: column;
   gap: 20px;
   width: 50%;
-  color: white;
 }
 
 .hero-info h1 {
@@ -211,3 +214,182 @@ ul {
   width: 70%;
   color: white;
 }
+.hero-card-creator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.hero-card {
+  width: 310px;
+  background: rgb(90, 90, 90);
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.hero-card {
+  opacity: 0;
+  animation: fade 1s ease-in forwards, slide-right 1.3s ease-in-out;
+  animation-delay: 0.2s;
+}
+.hero-card img{
+  max-width: 100%;
+  border-radius: 10px;
+}
+.hero-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+.hero-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+.hero-card-news {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news-info p{
+  color: white;
+  font-size: 15px;
+}
+
+@media (max-width: 1100px) {
+  .hero-info {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .hero-info h1 {
+    width: 90%;
+    max-width: 500px;
+    min-width: unset; 
+  }
+
+  .hero-info p {
+    width: 60%;
+    max-width: 600px;
+  }
+
+  .hero-card { 
+    display: none;
+  }
+
+  /*info*/
+  #info h2 {
+    text-align: center;
+    width: 80%;
+  }
+}
+/*About*/
+#about {
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+#about h2{
+  font-weight: 700;
+  font-size: 34px;
+  background: linear-gradient(
+    to top,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(252, 205, 77, 1) 50%,
+    rgba(248, 181, 0, 1) 51%,
+    rgba(251, 223, 147, 1) 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.about-cards-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.about-card {
+  width: 355px;
+  height: 290px;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.about-card h3{
+  font-size: 20px;
+  font-weight: 700;
+  color: #f2c935;
+}
+.about-card i{
+  font-size: 38px;
+  color: white;
+}
+.about-card p{
+  color: white;
+}
+@media (max-width:1100px){
+  #about h2{
+    text-align: center;
+    width: 80%;
+  }
+  .about-cards-container{
+    max-width: 70%;
+  }
+}
+
+/*Cards img*/
+#cards-img{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 40px 0;
+}
+#cards-img h2 {
+  font-weight: 700;
+  font-size: 80px;
+  background: linear-gradient(
+    to top,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(252, 205, 77, 1) 50%,
+    rgba(248, 181, 0, 1) 51%,
+    rgba(251, 223, 147, 1) 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  gap: 20px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-family: 'Monoton', cursive;
+
+}
+.cards-info{
+  border-bottom: 5px solid #ffd000;
+  width: 98%;
+}
+@media (max-width:1100px){
+  #cards-img h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
