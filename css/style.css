@@ -530,7 +530,11 @@ p {
   background: #222222;
   border-radius: 20px;
 }
-
+@media(max-width:500px){
+  .contact-form {
+    border-radius: 10px 10px 0 0px;
+  }
+}
 .contact-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
