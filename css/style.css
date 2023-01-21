@@ -41,7 +41,7 @@ a:hover {
 ul {
   list-style: none;
 }
-button{
+button {
   cursor: pointer;
 }
 .container {
@@ -482,8 +482,9 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
+    font-family: "Monoton", cursive;
   }
 }
 
@@ -697,12 +698,12 @@ footer {
   background-color: #ffd000;
 }
 
-@media(max-width:500px){
+@media (max-width: 500px) {
   .container-footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+  }
 }
