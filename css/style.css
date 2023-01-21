@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 html {
   scroll-behavior: smooth;
+  scroll-padding-top:10%;
 }
 *,
 *:before,
@@ -700,6 +701,13 @@ footer {
 
 @media (max-width: 500px) {
   .container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .box-copyright p {
     display: flex;
     flex-direction: column;
     justify-content: center;
