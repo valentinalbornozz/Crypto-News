@@ -626,6 +626,9 @@ p {
     display: grid;
     grid-template-columns: none;
   }
+  .contact-info {
+    border-radius: 0 0 20px 20px;
+  }
 }
 
 /*Footer*/
