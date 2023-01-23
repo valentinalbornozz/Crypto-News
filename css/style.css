@@ -107,7 +107,7 @@ p {
   margin-top: 12px;
 }
 
-/*nav left*/
+/*nav*/
 .nav-main ul {
   display: flex;
 }
@@ -123,19 +123,6 @@ p {
 }
 
 /*Menu hamburguesa*/
-.overlay {
-  position: fixed;
-  top: 80px;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  display: none;
-}
 #menu-toggle,
 .menu-label i {
   display: none;
@@ -147,7 +134,7 @@ p {
     display: flex;
     order: 2;
     cursor: pointer;
-    transition: all 1s ease-out;
+    transition: all .5s ease-out;
   }
   .menu-label i {
     display: flex;
@@ -160,7 +147,7 @@ p {
   }
   .navbar-list {
     font-size: 20px;
-    transition: all 0.5s ease;
+    transition: all .5s ease;
     position: fixed;
     right: 5%;
     top: 80px;
@@ -175,7 +162,7 @@ p {
     padding: 20px;
     gap: 15px;
     z-index: 2;
-    transform: translateX(-200%);
+    transform: translateY(-200%);
   }
   .navbar-list li a {
     color: black;
@@ -183,16 +170,32 @@ p {
   .navbar-list li a:hover {
     color: #ffd000;
   }
+  .overlay {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: none;
+    transition: all 0.5s ease;
+    transform: translateY(-200%);
+  }
   #menu-toggle:checked + .navbar-list {
     display: flex;
     transition: all 0.5s ease;
     transform: translateY(0);
   }
-  .nav-main ul {
-    display: none;
-  }
+
   #menu-toggle:checked ~ .overlay {
-    display: block;
+    display:flex;
+    transition: all 0.5s ease;
+    transform: translateY(0);
+    top: 0;
   }
 }
 @media (max-width: 500px) {
@@ -202,7 +205,7 @@ p {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 }
 
@@ -971,7 +974,7 @@ input[type="button"],
 .cuenta-gratis-p {
   display: flex;
 }
-#menu-register:checked + .form label i{
+#menu-register:checked + .form label i {
   display: none;
   transition: all 1s ease-in-out;
 }
