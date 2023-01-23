@@ -160,10 +160,10 @@ p {
   }
   .navbar-list {
     font-size: 20px;
-    transition: 0.5s;
+    transition: all 0.5s;
     position: fixed;
     right: 5%;
-    top: 8.5%;
+    top: 11.5%;
     width: 90%;
     border: 0;
     background-color: white;
@@ -184,6 +184,7 @@ p {
   }
   #menu-toggle:checked + .navbar-list {
     display: flex;
+    transition: all 0.5s;
   }
   .nav-main ul {
     display: none;
