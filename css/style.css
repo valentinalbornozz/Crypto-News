@@ -673,6 +673,10 @@ p {
   .contact-info {
     border-radius: 0 0 20px 20px;
   }
+  .contact-wrapper > * {
+    padding: 1em;
+    font-family: "Quicksand", sans-serif;
+}
 }
 
 /*Footer*/
@@ -996,5 +1000,20 @@ input[type="button"],
 @media (max-width: 524px) {
   .form input[type="button"] {
     width: 90%;
+  }
+}
+
+/*Maps*/
+.maps{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mapss {
+  border-radius: 10px;
+}
+@media (max-width: 524px) {
+  .maps{
+    width: 100%;
   }
 }
