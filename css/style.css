@@ -134,7 +134,7 @@ p {
     display: flex;
     order: 2;
     cursor: pointer;
-    transition: all .5s ease-out;
+    transition: all 0.5s ease-out;
   }
   .menu-label i {
     display: flex;
@@ -147,7 +147,7 @@ p {
   }
   .navbar-list {
     font-size: 20px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     position: fixed;
     right: 5%;
     top: 80px;
@@ -192,7 +192,7 @@ p {
   }
 
   #menu-toggle:checked ~ .overlay {
-    display:flex;
+    display: flex;
     transition: all 0.5s ease;
     transform: translateY(0);
     top: 0;
@@ -534,7 +534,7 @@ p {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
-  padding: 1.5em;
+  padding-bottom: 50px;
 }
 
 .logo-contact {
@@ -553,7 +553,7 @@ p {
 }
 
 .contact-wrapper > * {
-  padding: 2em;
+  padding: 1em;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -673,10 +673,18 @@ p {
   .contact-info {
     border-radius: 0 0 20px 20px;
   }
-  .contact-wrapper > * {
-    padding: 1em;
-    font-family: "Quicksand", sans-serif;
 }
+
+@media (max-width: 500px) {
+  .contact-wrapper > * {
+    width: 330px;
+    transition: all 0.5s ease;
+  }
+}
+@media (max-width: 400px) {
+  .contact-wrapper > * {
+    width: 255px;
+  }
 }
 
 /*Footer*/
@@ -774,11 +782,18 @@ footer {
 }
 
 .form {
+  width: 500px;
   padding: 10px;
+  margin: 20px;
+  background-color: #222222;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.5s ease;
 }
 .form h2 {
   font-size: 50px;
   padding: 40px 0;
+  transition: all 0.5s ease;
 }
 
 .form button {
@@ -809,15 +824,6 @@ footer {
   transition: background-color 1s ease-out;
   outline: 0;
   font-size: 600;
-}
-
-.form {
-  width: 500px;
-  padding: 10px;
-  margin: 20px;
-  background-color: #222222;
-  border-radius: 10px;
-  text-align: center;
 }
 
 .create-account {
@@ -977,10 +983,11 @@ footer {
 input[type="button"],
 .cuenta-gratis-p {
   display: flex;
+  transition: all 0.5s ease;
 }
 #menu-register:checked + .form label i {
   display: none;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease;
 }
 
 @media (max-width: 769px) {
@@ -1004,16 +1011,21 @@ input[type="button"],
 }
 
 /*Maps*/
-.maps{
+.maps {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .mapss {
-  border-radius: 10px;
+  border-radius: 40px;
+  height: 330px;
+  padding: 20px;
 }
 @media (max-width: 524px) {
-  .maps{
+  .maps {
     width: 100%;
+  }
+  .mapss {
+    width: inherit;
   }
 }
