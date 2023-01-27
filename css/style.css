@@ -771,7 +771,7 @@ footer {
   }
 }
 
-/*Login*/
+/*Login & Register*/
 #form-container {
   font-family: "Quicksand", sans-serif;
   margin: 60px;
@@ -913,7 +913,7 @@ footer {
 }
 .form input,
 .form p,
-.form input[type="button"] {
+.form input[type="button"], .form span{
   display: none;
 }
 .border-icons a {
@@ -924,7 +924,7 @@ footer {
 
 #menu-register-c,
 #menu-register,
-#menu-register-c i {
+#menu-register-c i{
   display: none;
 }
 
@@ -979,18 +979,27 @@ footer {
   text-align: center;
   margin: 10px;
 }
-#menu-register:checked + .form input,
-.form p,
-input[type="button"],
-.cuenta-gratis-p {
-  display: flex;
-  transition: all 0.5s ease;
-}
-#menu-register:checked + .form label i {
+#menu-register:checked + .form label i, .contact-p {
   display: none;
   transition: all 0.5s ease;
 }
+#menu-register:checked + .form input, .form p,
+input[type="button"]{
+  display: flex;
+  transition: all 0.5s ease;
+}
+#menu-register:checked + .form span {
+  display: flex;
+}
 
+.form-span {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
 @media (max-width: 769px) {
   .form {
     width: 400px;
