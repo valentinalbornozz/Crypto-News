@@ -121,7 +121,16 @@ p {
 .nav-main ul li a:hover {
   border-bottom: 2px solid white;
 }
-
+@media (max-width: 1234px){
+  .nav-main ul  {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1131px){
+  .nav-main ul  {
+    font-size: 14px;
+  }
+}
 /*Menu hamburguesa*/
 #menu-toggle,
 .menu-label i {
